@@ -1,0 +1,23 @@
+{
+  "name": "gh-notification-test",
+  "version": "0.0.0",
+  "description": "gh-notification-test ====================",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lalitkapoor/gh-notification-test.git"
+  },
+  "author": "Lalit Kapoor <lalitkapoor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lalitkapoor/gh-notification-test/issues"
+  },
+  "homepage": "https://github.com/lalitkapoor/gh-notification-test",
+  "dependencies": {
+    "express": "~4.1.2"
+  }
+}
