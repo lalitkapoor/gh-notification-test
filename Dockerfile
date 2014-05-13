@@ -1,5 +1,6 @@
 FROM ubuntu
 MAINTAINER Kimbro Staken
+EXPOSE 3000
 
 RUN apt-get install -y software-properties-common python-software-properties python
 RUN add-apt-repository -y ppa:chris-lea/node.js
@@ -12,5 +13,6 @@ RUN mkdir /var/www
 ADD app.js /var/www/app.js
 ADD package.json /var/www/package.json
 
+CMD ["cd", "/var/www"]
 CMD ["/usr/bin/npm", "install"]
-CMD ["/usr/bin/node", "/var/www/app.js"]
+CMD ["/usr/bin/node", "app.js"]
