@@ -10,10 +10,8 @@ RUN apt-get install -y nodejs
 #RUN apt-get install -y nodejs=0.6.12~dfsg1-1ubuntu1
 RUN mkdir /var/www
 
+ADD start.sh /var/www/start.sh
 ADD app.js /var/www/app.js
 ADD package.json /var/www/package.json
 
-RUN export PORT=80
-CMD ["cd", "/var/www"]
-CMD ["/usr/bin/npm", "install"]
-CMD ["/usr/bin/node", "app.js"]
+RUN sh /var/www/start.sh
