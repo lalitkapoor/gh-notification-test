@@ -1,6 +1,7 @@
 FROM ubuntu
 MAINTAINER Kimbro Staken
 EXPOSE 3000
+ENV PORT=80
 
 RUN apt-get install -y software-properties-common python-software-properties python
 RUN add-apt-repository -y ppa:chris-lea/node.js
@@ -14,4 +15,4 @@ ADD start.sh /var/www/start.sh
 ADD app.js /var/www/app.js
 ADD package.json /var/www/package.json
 
-RUN sh /var/www/start.sh
+CMD ["sh" "/var/www/start.sh"]
