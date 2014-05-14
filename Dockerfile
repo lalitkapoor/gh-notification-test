@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Kimbro Staken
 EXPOSE 3000
-ENV PORT=80
+ENV PORT 80
 
 RUN apt-get install -y software-properties-common python-software-properties python
 RUN add-apt-repository -y ppa:chris-lea/node.js
