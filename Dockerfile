@@ -15,4 +15,4 @@ ADD start.sh /var/www/start.sh
 ADD app.js /var/www/app.js
 ADD package.json /var/www/package.json
 
-CMD ["sh" "/var/www/start.sh"]
+CMD ["/bin/sh" "/var/www/start.sh"]
