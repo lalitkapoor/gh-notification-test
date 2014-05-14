@@ -13,6 +13,7 @@ RUN mkdir /var/www
 ADD app.js /var/www/app.js
 ADD package.json /var/www/package.json
 
+RUN export PORT=80
 CMD ["cd", "/var/www"]
 CMD ["/usr/bin/npm", "install"]
 CMD ["/usr/bin/node", "app.js"]
